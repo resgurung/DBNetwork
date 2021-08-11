@@ -19,6 +19,8 @@ public protocol DBURLFactoryProtocol {
 
 public struct DBURLFactory: DBURLFactoryProtocol {
     
+    public init() {}
+    
     public func makeURL(urlType: URLType) -> URL? {
         
         return urlType.url
