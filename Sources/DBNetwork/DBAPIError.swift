@@ -37,8 +37,6 @@ public enum DBAPIError: Error {
     
     case emptyResponse
     
-    case error_304(Any)
-    
     case responseNotHTTPURLResponse
     
     case zeroByteResource
@@ -120,10 +118,6 @@ extension DBAPIError: LocalizedError{
         case .emptyResponse:
             
             return  NSLocalizedString("The response is empty.", comment: "NetworkError")
-            
-        case .error_304(let error):
-            
-            return NSLocalizedString((error as? Error)?.localizedDescription ?? "Data Not changed.", comment: "Error")
             
         case .responseNotHTTPURLResponse:
             
